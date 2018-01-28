@@ -1,0 +1,4 @@
+*.idea
+js/index.html
+nbproject**
+/js/favicon.ico
