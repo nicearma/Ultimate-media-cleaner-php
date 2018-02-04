@@ -9,7 +9,7 @@ use UMC\model\Option;
  */
 class SqlCheckPostAndPageBestLuck extends SqlCheckAbstract {
 
-    function check(string $src, $id, Option $option) {
+    function check($src, $id, Option $option) {
 
         $posts = $this->db->posts;
         if (!empty($id)) {

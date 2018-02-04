@@ -24,7 +24,7 @@ class Checkers {
         array_push($this->checkers, $checker);
     }
 
-    public function verify(string $src, $id, Option $options) {
+    public function verify($src, $id, Option $options) {
         
         for ($i = 0; $i < count($this->checkers); $i++) {
             $result = call_user_func_array(array($this->checkers[$i], "check"), array($src, $id, $options));

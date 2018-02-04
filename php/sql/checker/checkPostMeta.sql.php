@@ -9,7 +9,7 @@ use UMC\model\Option;
  */
 class SqlCheckPostMeta extends SqlCheckAbstract {
 
-    function check(string $src, $id, Option $option) {
+    function check($src, $id, Option $option) {
 
         if ($option->check->postMeta) {
             

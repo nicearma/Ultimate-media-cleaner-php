@@ -8,7 +8,7 @@ use UMC\model\Option;
  */
 class SqlCheckPostAndPageAll extends SqlCheckAbstract {
 
-    function check(string $src, $id, Option $option) {
+    function check($src, $id, Option $option) {
         
         $posts = $this->db->posts;
 

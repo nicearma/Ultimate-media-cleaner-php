@@ -15,7 +15,7 @@ class VerifyService {
         $this->checkers = new Checkers();
     }
 
-    public function verify($name, $id = null): Verification {
+    public function verify($name, $id = null) {
 
         $verification = new Verification();
         $verification->id = $id;

@@ -21,7 +21,7 @@ class Response {
      * @param $code
      * @param $response
      */
-    public function __construct(int $code, $response)
+    public function __construct($code, $response)
     {
         $this->code = $code;
         $this->response = $response;

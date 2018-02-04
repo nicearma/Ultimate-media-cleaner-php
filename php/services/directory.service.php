@@ -58,7 +58,7 @@ class DirectoryService {
         return trailingslashit(self::uploadUrl() . $directory) . basename($name);
     }
 
-    public function getSimpleFilesFromDirectory(string $directory, $addUploadDir = true): DirectoryFiles {
+    public function getSimpleFilesFromDirectory($directory, $addUploadDir = true) {
 
         $wpDirectory = $directory;
 
@@ -73,7 +73,7 @@ class DirectoryService {
         return $directoryFiles;
     }
 
-    public function getFilesFromDirectory(string $directory): DirectoryFiles {
+    public function getFilesFromDirectory($directory) {
 
         $wpDirectory = self::uploadDir() . $directory;
 
@@ -100,7 +100,7 @@ class DirectoryService {
         return $directoryFiles;
     }
 
-    public function getFile(string $name, string $directory) {
+    public function getFile($name, $directory) {
         $path = self::filePath($directory, $name);
 
         if (!file_exists($path)) {
@@ -118,7 +118,7 @@ class DirectoryService {
         return $file;
     }
 
-    public function getDirectories(string $base): Directory {
+    public function getDirectories($base) {
 
         $recursiveDir = new \RecursiveDirectoryIterator($base, \RecursiveDirectoryIterator::SKIP_DOTS);
         $iter = new \RecursiveIteratorIterator(
@@ -136,7 +136,7 @@ class DirectoryService {
         return $directory;
     }
 
-    public function getDirectoriesFromDirectory(string $base): Directory {
+    public function getDirectoriesFromDirectory($base) {
 
         $dirIterator = new \DirectoryIterator($base);
 
@@ -153,7 +153,7 @@ class DirectoryService {
         return $directory;
     }
 
-    public static function delete(string $src) {
+    public static function delete($src) {
         // trying to delete something that is not at the upload folder
         if (strstr($src, self::uploadDir()) === false) {
             return false;
@@ -170,7 +170,7 @@ class DirectoryService {
         return !file_exists($src);
     }
 
-    public function deleteDirectory(string $path) {
+    public function deleteDirectory($path) {
         $isUploadFolder = strstr($path, self::uploadDir());
         if (file_exists($path) && ($isUploadFolder !== false)) {
 

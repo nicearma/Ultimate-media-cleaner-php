@@ -22,7 +22,7 @@ class FileService {
         $this->log = LoggerService::getInstance();
     }
 
-    public function count($type): Count {
+    public function count($type) {
         $call = $this->getService($type);
         return new Count(call_user_func_array(array($call, 'count'), array()));
     }
@@ -168,7 +168,7 @@ class FileService {
         return $verification;
     }
 
-    public function deleteImage(int $id, string $name, $sizeName) {
+    public function deleteImage($id, $name, $sizeName) {
         $file = $this->convertIdToFile($id);
 
         $attachment = wp_get_attachment_metadata($file->id);

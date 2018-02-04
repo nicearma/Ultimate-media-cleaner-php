@@ -8,7 +8,7 @@ class DirectoryFiles {
     //type array
     public $files;
 
-    public function __construct(string $directory, array $files = []) {
+    public function __construct($directory, $files = []) {
         $this->directory = $directory;
         $this->files = $files;
     }

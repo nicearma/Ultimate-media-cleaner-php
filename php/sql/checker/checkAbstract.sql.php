@@ -15,6 +15,6 @@ abstract class SqlCheckAbstract {
         $this->db = $db;
     }
 
-    abstract function check(string $src, $id, Option $option);
+    abstract function check($src, $id, Option $option);
 
 }

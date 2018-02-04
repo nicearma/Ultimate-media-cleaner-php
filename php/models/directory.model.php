@@ -11,12 +11,12 @@ class Directory {
     //type array
     public $directories;
 
-    public function __construct(string $base, array $directories = []) {
+    public function __construct($base, $directories = []) {
         $this->base = $base;
         $this->directories = $directories;
     }
 
-    public function addDirectory(string $directory) {
+    public function addDirectory($directory) {
         if (!empty($directory)) {
             $this->directories[] = $directory;
         }

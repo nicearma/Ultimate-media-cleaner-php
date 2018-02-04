@@ -1,4 +1,4 @@
-=== UMC ===
+=== Ultimate media cleaner ===
 Contributors: nicearma
 Tags: media clean, image clean, attachment clean, delete, image not used, image unused, files unused, files not used, delete unused, delete not used image, clean up image, clean image, clean images, clean, clean wp, clean wordpress
 Requires at least: 4.4
@@ -24,7 +24,8 @@ This plugin use:
 * Angular UI 
 * Bootstrap
 
-Github at <a href="https://github.com/nicearma/dnui">DNUI</a>
+Github at <a href="https://github.com/nicearma/ultimate-media-cleaner-js">UMC JS</a>
+Github at <a href="https://github.com/nicearma/ultimate-media-cleaner-php">UMC PHP</a>
 
 == Changelog ==
 
